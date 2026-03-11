@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使い方ガイド - CashCalendar</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        .header p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1rem;
+        }
+        .step {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        .step-number {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        .step-content h3 {
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        .step-content p {
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.8;
+        }
+        .step-content .note {
+            background: #fff8e1;
+            border-left: 3px solid #f77f00;
+            padding: 10px 15px;
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: #666;
+            border-radius: 0 8px 8px 0;
+        }
+        .section-title {
+            color: white;
+            font-size: 1.3rem;
+            margin: 30px 0 15px;
+            padding-left: 10px;
+            border-left: 4px solid rgba(255,255,255,0.7);
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+        .back-link:hover { text-decoration: underline; }
+        .line-btn {
+            display: inline-block;
+            background: #06C755;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📖 使い方ガイド</h1>
+            <p>CashCalendarの基本的な使い方をご説明します</p>
+        </div>
+
+        <div class="section-title">📥 ダウンロード・起動方法</div>
+
+        <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+                <h3>体験版をダウンロード</h3>
+                <p>トップページの「体験版 無料ダウンロード」ボタンをクリックしてください。</p>
+                <div class="note">⚠️ Googleドライブの警告が表示されたら「このままダウンロード」をクリックしてください。</div>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+                <h3>EXEファイルを起動</h3>
+                <p>ダウンロードした <strong>CashCalendar_v2.15.0_Trial.exe</strong> をダブルクリックして起動してください。</p>
+                <div class="note">⚠️ Windowsの警告が表示された場合は「詳細情報」→「実行」をクリックしてください。</div>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+                <h3>アプリが起動します</h3>
+                <p>インストール不要でそのまま起動します。デスクトップに置いておくと便利です。</p>
+            </div>
+        </div>
+
+        <div class="section-title">📊 基本的な使い方</div>
+
+        <div class="step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+                <h3>データを入力する</h3>
+                <p>収入・支出の予定を日付と金額で入力します。体験版は5件まで入力できます。</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">5</div>
+            <div class="step-content">
+                <h3>グラフで資金繰りを確認</h3>
+                <p>入力したデータが自動的にグラフ化され、資金繰りの状況を見える化できます。</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">6</div>
+            <div class="step-content">
+                <h3>データを保存する</h3>
+                <p>入力したデータは保存ボタンでPC内に保存できます。次回起動時に読み込めます。</p>
+            </div>
+        </div>
+
+        <div class="section-title">💎 製品版へのアップグレード</div>
+
+        <div class="step">
+            <div class="step-number">7</div>
+            <div class="step-content">
+                <h3>5件以上使いたい場合は製品版へ</h3>
+                <p>製品版はデータ件数無制限でご利用いただけます。LINEからお気軽にお問い合わせください。</p>
+                <a href="https://line.me/R/ti/p/@cashcalendar公式" class="line-btn">📱 LINEで問い合わせる</a>
+            </div>
+        </div>
+
+        <a href="../" class="back-link">← トップページに戻る</a>
+    </div>
+</body>
+</html>
