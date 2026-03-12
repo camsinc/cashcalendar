@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>購入方法 - CashCalendar</title>
+    <meta name="description" content="CashCalendar製品版の購入方法。クレジットカード・銀行振込に対応。購入後すぐにシリアル番号が届きます。">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Noto Sans JP', sans-serif; background: linear-gradient(135deg, #1565C0 0%, #1976D2 100%); min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px;}
+        .container {max-width: 600px; width: 100%; background: white; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); padding: 40px; text-align: center;}
+        .icon {width: 120px; height: 120px; margin: 0 auto 20px; border-radius: 20px; overflow: hidden;}
+        .icon img {width: 100%; height: 100%;}
+        h1 {font-size: 2rem; color: #333; margin-bottom: 5px;}
+        .price {font-size: 2rem; color: #1565C0; font-weight: bold; margin-bottom: 10px;}
+        .description {color: #666; line-height: 1.8; margin-bottom: 30px; font-size: 1rem;}
+        .flow {background: #f5f5f5; border-radius: 12px; padding: 20px; margin-bottom: 30px; text-align: left;}
+        .flow h3 {color: #1565C0; font-size: 1.1rem; margin-bottom: 15px; text-align: center;}
+        .flow-steps {display: flex; flex-direction: column; gap: 10px;}
+        .flow-step {display: flex; align-items: center; gap: 15px; padding: 10px; background: white; border-radius: 10px;}
+        .step-num {background: #1565C0; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;}
+        .step-text {font-size: 0.95rem; color: #444;}
+        .buy-btn {display: inline-block; background: linear-gradient(135deg, #1565C0 0%, #1976D2 100%); color: white; padding: 18px 40px; border-radius: 30px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 8px 20px rgba(21,101,192,0.4); transition: all 0.3s ease; margin-bottom: 15px; width: 100%;}
+        .buy-btn:hover {transform: translateY(-3px); box-shadow: 0 12px 30px rgba(21,101,192,0.5);}
+        .bank {background: #e3f2fd; border: 1px solid #90caf9; border-radius: 12px; padding: 20px; margin-bottom: 20px; text-align: left;}
+        .bank h3 {color: #1565C0; margin-bottom: 10px;}
+        .bank p {font-size: 0.9rem; color: #555; line-height: 1.8;}
+        .note {font-size: 0.85rem; color: #999; margin-top: 15px; line-height: 1.6;}
+        .back-link {display: inline-block; margin-top: 20px; color: #1565C0; text-decoration: none; font-weight: 500;}
+        .back-link:hover {text-decoration: underline;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">
+            <img src="https://www.genspark.ai/api/files/s/DqqPzOQt" alt="CashCalendar">
+        </div>
+        <h1>CashCalendar 製品版</h1>
+        <div class="price">¥26,500（税込）</div>
+        <div class="description">
+            データ件数<strong>無制限</strong>で全機能をご利用いただけます。<br>
+            購入後すぐにシリアル番号が届きます！
+        </div>
+
+        <div class="flow">
+            <h3>💳 購入の流れ</h3>
+            <div class="flow-steps">
+                <div class="flow-step"><div class="step-num">1</div><div class="step-text">下の「今すぐ購入」ボタンをクリック</div></div>
+                <div class="flow-step"><div class="step-num">2</div><div class="step-text">クレジットカード情報を入力</div></div>
+                <div class="flow-step"><div class="step-num">3</div><div class="step-text">決済完了！</div></div>
+                <div class="flow-step"><div class="step-num">4</div><div class="step-text">シリアル番号がメールで自動送信されます</div></div>
+                <div class="flow-step"><div class="step-num">5</div><div class="step-text">すぐにアプリが使えます！</div></div>
+            </div>
+        </div>
+
+        <a href="https://buy.stripe.com/00waERg0lfRl8tm6FQ9sk00" class="buy-btn">
+            💳 今すぐ購入する
+        </a>
+
+        <div class="bank">
+            <h3>🏦 銀行振込をご希望の方</h3>
+            <p>銀行振込でのご購入をご希望の方は、LINEにてお問い合わせください。<br>
+            振込確認後、シリアル番号をお送りします。</p>
+            <br>
+            <a href="https://line.me/R/ti/p/@128qoiua" style="display:inline-block; background:#06C755; color:white; padding:10px 20px; border-radius:25px; text-decoration:none; font-weight:bold;">📱 LINEで問い合わせる</a>
+        </div>
+
+        <div class="note">
+            ※ クレジットカード決済はStripeを使用しています。<br>
+            ※ VISA・Mastercard・American Express・JCB対応
+        </div>
+
+        <a href="../" class="back-link">← トップページに戻る</a>
+    </div>
+</body>
+</html>
