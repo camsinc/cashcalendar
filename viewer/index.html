@@ -27,7 +27,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Noto Sans JP', sans-serif;
-            background: linear-gradient(135deg, #2196F3 0%, #42a5f5 100%);
+            background: linear-gradient(135deg, #1565C0 0%, #1976D2 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -43,12 +43,23 @@
             padding: 40px;
             text-align: center;
         }
-        .icon { font-size: 4rem; margin-bottom: 20px; }
+        .icon {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        .icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
         h1 { font-size: 2rem; color: #333; margin-bottom: 10px; }
         .badge {
             display: inline-block;
             background: #e3f2fd;
-            color: #2196F3;
+            color: #1565C0;
             padding: 8px 20px;
             border-radius: 20px;
             font-weight: bold;
@@ -62,14 +73,14 @@
             font-size: 1rem;
         }
         .features {
-            background: #f9f9f9;
+            background: #f5f5f5;
             border-radius: 12px;
             padding: 20px;
             margin-bottom: 30px;
             text-align: left;
         }
         .features h3 {
-            color: #2196F3;
+            color: #1565C0;
             font-size: 1.1rem;
             margin-bottom: 15px;
             text-align: center;
@@ -85,25 +96,26 @@
             content: "✓";
             position: absolute;
             left: 0;
-            color: #2196F3;
+            color: #1565C0;
             font-weight: bold;
         }
         .download-btn {
-            display: inline-block;
-            background: linear-gradient(135deg, #2196F3 0%, #42a5f5 100%);
+            display: block;
+            background: linear-gradient(135deg, #1565C0 0%, #1976D2 100%);
             color: white;
             padding: 18px 40px;
             border-radius: 30px;
             text-decoration: none;
             font-weight: bold;
             font-size: 1.1rem;
-            box-shadow: 0 8px 20px rgba(33, 150, 243, 0.4);
+            box-shadow: 0 8px 20px rgba(21,101,192,0.4);
             transition: all 0.3s ease;
             margin-bottom: 20px;
+            width: 100%;
         }
         .download-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(33, 150, 243, 0.5);
+            box-shadow: 0 12px 30px rgba(21,101,192,0.5);
         }
         .warning {
             background: #e3f2fd;
@@ -122,10 +134,20 @@
             margin-top: 15px;
             line-height: 1.6;
         }
+        .windows-badge {
+            display: inline-block;
+            background: #f0f4ff;
+            border: 1px solid #90caf9;
+            color: #1565C0;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 25px;
+        }
         .back-link {
             display: inline-block;
             margin-top: 20px;
-            color: #2196F3;
+            color: #1565C0;
             text-decoration: none;
             font-weight: 500;
         }
@@ -134,9 +156,12 @@
 </head>
 <body>
     <div class="container">
-        <div class="icon">👁️</div>
+        <div class="icon">
+            <img src="../download.png" alt="CashCalendar">
+        </div>
         <h1>CashCalendar 閲覧版</h1>
         <div class="badge">無料ダウンロード</div>
+        <div class="windows-badge">🖥️ Windows PC専用</div>
         <div class="description">
             既存データの<strong>閲覧・印刷に特化</strong>した無料版です。<br>
             データの確認・共有用としてご利用いただけます。
@@ -147,11 +172,11 @@
                 <li>データの閲覧・印刷が可能</li>
                 <li>グラフ表示対応</li>
                 <li>インストール不要（EXEファイル単体で動作）</li>
-                <li>Windows対応</li>
+                <li>Windows PC専用</li>
                 <li>完全無料でご利用いただけます</li>
             </ul>
         </div>
-        <a href="https://drive.google.com/uc?export=download&id=1TH_9hWtNgXVxOFZDIBGYNHGpsMQxtX6g" class="download-btn">
+        <a href="https://drive.google.com/uc?export=download&id=1HWuj7VykLbfB3YgLx76po3_HolbO1B4n" class="download-btn">
             📥 閲覧版をダウンロード
         </a>
         <div class="warning">
