@@ -26,103 +26,120 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Noto Sans JP', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+            background: #f4f6f9;
             min-height: 100vh;
-            padding: 40px 20px;
+            padding: 0 0 60px;
+            color: #1f2937;
         }
         .container {
-            max-width: 700px;
+            max-width: 720px;
             margin: 0 auto;
+            padding: 0 20px;
         }
         .header {
+            background: #14213d;
+            padding: 48px 20px 40px;
+            margin-bottom: 32px;
             text-align: center;
-            margin-bottom: 40px;
         }
         .header h1 {
-            font-size: 2.5rem;
-            color: white;
-            margin-bottom: 10px;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            font-size: 1.9rem;
+            color: #ffffff;
+            margin-bottom: 8px;
+            font-weight: 700;
+            letter-spacing: 0.02em;
         }
         .header p {
-            color: rgba(255,255,255,0.9);
-            font-size: 1rem;
+            color: rgba(255,255,255,0.72);
+            font-size: 0.95rem;
         }
+        .section-title {
+            color: #14213d;
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin: 36px 0 14px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #d6dbe3;
+            letter-spacing: 0.02em;
+        }
+        .section-title:first-of-type { margin-top: 0; }
         .faq-item {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
-            margin-bottom: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            background: #ffffff;
+            border: 1px solid #e3e6ec;
+            border-radius: 6px;
+            padding: 22px 24px;
+            margin-bottom: 12px;
         }
         .question {
-            font-size: 1rem;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 12px;
-            padding-left: 30px;
+            font-size: 0.98rem;
+            font-weight: 700;
+            color: #14213d;
+            margin-bottom: 10px;
+            padding-left: 34px;
             position: relative;
         }
         .question:before {
             content: "Q";
             position: absolute;
             left: 0;
-            background: #667eea;
+            top: -1px;
+            background: #14213d;
             color: white;
             width: 22px;
             height: 22px;
-            border-radius: 50%;
-            font-size: 0.75rem;
+            border-radius: 4px;
+            font-size: 0.72rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: bold;
-            top: 1px;
+            font-weight: 700;
         }
         .answer {
-            font-size: 0.95rem;
-            color: #555;
+            font-size: 0.92rem;
+            color: #4b5563;
             line-height: 1.8;
-            padding-left: 30px;
+            padding-left: 34px;
             position: relative;
         }
         .answer:before {
             content: "A";
             position: absolute;
             left: 0;
-            background: #27ae60;
-            color: white;
+            top: 0;
+            background: #eef0f4;
+            color: #14213d;
             width: 22px;
             height: 22px;
-            border-radius: 50%;
-            font-size: 0.75rem;
+            border-radius: 4px;
+            font-size: 0.72rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: bold;
-            top: 1px;
+            font-weight: 700;
         }
         .back-link {
             display: block;
             text-align: center;
-            margin-top: 30px;
-            color: white;
+            margin-top: 36px;
+            color: #14213d;
             text-decoration: none;
-            font-weight: 500;
-            font-size: 1rem;
+            font-weight: 600;
+            font-size: 0.92rem;
         }
         .back-link:hover { text-decoration: underline; }
         .line-btn {
             display: inline-block;
-            background: #06C755;
+            background: #14213d;
             color: white;
-            padding: 12px 25px;
-            border-radius: 25px;
+            padding: 11px 24px;
+            border-radius: 4px;
             text-decoration: none;
-            font-weight: bold;
-            margin-top: 10px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-top: 8px;
         }
+        .line-btn:hover { background: #1f2f52; }
     </style>
 </head>
 <body>
@@ -132,10 +149,70 @@
             <p>CashCalendarについてのよくある質問をまとめました</p>
         </div>
 
+        <div class="section-title">■ 基本情報</div>
+
+        <div class="faq-item">
+            <div class="question">CashCalendarとはどんなソフトですか？</div>
+            <div class="answer">会社の「お金の流れ」を日々の入力から自動集計し、今日時点の資金残高や今後の入金・支払予定をひと目で確認できる資金管理ソフトです。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">どんな人におすすめですか？</div>
+            <div class="answer">経理担当者、個人事業主、中小企業の経営者様など、日々の入出金や資金繰りを手計算やExcelで管理されている方におすすめです。また、閲覧版とメール・Dropbox連携を使えば、顧問の経営コンサルタントの方とデータを共有し、より緻密なアドバイスを受けることもできます。</div>
+        </div>
+
+        <div class="section-title">■ 購入・料金</div>
+
+        <div class="faq-item">
+            <div class="question">製品版はどのように購入できますか？</div>
+            <div class="answer">買い切りプラン(¥34,800、期間限定40%OFF)とサブスクリプションプラン(¥1,950×18回)からお選びいただけます。下記より直接ご購入いただけます。<br>
+            <a href="https://script.google.com/macros/s/AKfycbzTiDr6eV7M4f13G0C3i_NlyoC6HzfFBPT-EjKDsfDiCmM_BpTOVhFAnra7lYXMsD4V_g/exec" class="line-btn">🛒 購入ページへ進む</a>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">買い切りプランとサブスクリプションプランの違いは何ですか？</div>
+            <div class="answer">買い切りプランは一括払いでご購入後は追加費用なしでずっとご利用いただけます。サブスクリプションプランは月々¥1,950を18回(合計¥35,100)お支払いいただく分割払いです。機能に違いはありません。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">支払い方法は何がありますか？</div>
+            <div class="answer">クレジットカード決済(Stripe)にてお支払いいただけます。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">サブスクリプションの解約はできますか？</div>
+            <div class="answer">はい、サブスクリプションプランは支払い期間中いつでも解約を申し出ることができます。ただし、18回の支払い完了前に解約された場合は、残りの支払い分を一括でお支払いいただき、解約確定後はシリアル番号が無効となりご利用いただけなくなります。解約ではなく残額を前払いで完済されたい場合は、サポート窓口までご連絡ください(その場合、シリアル番号は無効化されず継続してご利用いただけます)。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">返金は可能ですか？</div>
+            <div class="answer">本サービスはダウンロード形式のデジタルコンテンツのため、お客様のご都合による返金は原則お受けできません。ただし、システムエラー等により商品が正しく提供されない場合は、個別に対応いたします。</div>
+        </div>
+
+        <div class="section-title">■ 試用版・閲覧版</div>
+
         <div class="faq-item">
             <div class="question">試用版と製品版の違いは何ですか？</div>
             <div class="answer">試用版はすべての機能を10件まで無料でお試しいただけます(利用期間の制限はありません)。製品版はデータ件数無制限でご利用いただけます。</div>
         </div>
+
+        <div class="faq-item">
+            <div class="question">試用版に使用期限はありますか？</div>
+            <div class="answer">ありません。ただし各項目の登録は10件までとなります。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">閲覧版はどのような場合に使いますか？</div>
+            <div class="answer">コンサルタントや金融機関など、外部の第三者にデータを共有する場合に使います。閲覧版はデータの確認のみが可能で、入力・編集はできません。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">閲覧版は誰でも無料で使えますか？</div>
+            <div class="answer">はい、無料でダウンロードいただけます。ただし閲覧するには、製品版ご利用者が発行するクライアントID(またはアクセスID)が必要です。</div>
+        </div>
+
+        <div class="section-title">■ インストール・動作環境</div>
 
         <div class="faq-item">
             <div class="question">インストールは必要ですか？</div>
@@ -148,16 +225,35 @@
         </div>
 
         <div class="faq-item">
-            <div class="question">データはどこに保存されますか？</div>
-            <div class="answer">データはお使いのPC内に保存されます。クラウドへのアップロードは行いません。</div>
+            <div class="question">スマートフォンやタブレットでも使えますか？</div>
+            <div class="answer">製品版はWindows PC専用です。試用版はWebブラウザ版のため、スマートフォン・タブレットでもご覧いただけます。</div>
+        </div>
+
+        <div class="section-title">■ セキュリティ・データ</div>
+
+        <div class="faq-item">
+            <div class="question">データの安全性は大丈夫ですか？</div>
+            <div class="answer">データは保存場所ごとに異なる方式で暗号化されます。このPC内に保存する場合はAES-256方式、Dropboxにアップロードする場合はクライアントID・アクセスIDを持つ方のみが復号できる形で、それぞれ暗号化されます。</div>
         </div>
 
         <div class="faq-item">
-            <div class="question">製品版はどのように購入できますか？</div>
-            <div class="answer">買い切りプラン(¥34,800)とサブスクリプションプラン(¥1,950×18回)からお選びいただけます。下記より直接ご購入いただけます。<br>
-            <a href="https://script.google.com/macros/s/AKfycbzTiDr6eV7M4f13G0C3i_NlyoC6HzfFBPT-EjKDsfDiCmM_BpTOVhFAnra7lYXMsD4V_g/exec" class="line-btn">🛒 購入ページへ進む</a>
-            </div>
+            <div class="question">他の人とデータを共有するにはどうすればいいですか？</div>
+            <div class="answer">Dropbox連携機能を使い、コンサルタントなどを「閲覧のみ」の権限でフォルダに招待できます。招待された方は無料の閲覧版アプリでデータを確認できます。メールでデータファイルを送信する場合も、クライアントID・アクセスIDが発行されていないパソコンでは開くことができないため、安心して共有いただけます。</div>
         </div>
+
+        <div class="section-title">■ パスワード・ログイン</div>
+
+        <div class="faq-item">
+            <div class="question">パスワードを忘れてしまいました</div>
+            <div class="answer">初回設定時に発行される「リセットキー」を使うと、パスワードを初期値(1234)にリセットできます。リセットキーも忘れた場合は、あなたと配偶者・お子様の誕生日など、記念日の合計を入力すると再生成できます。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">パソコンを買い替えた場合、データは引き継げますか？</div>
+            <div class="answer">はい。保存したデータファイルとシリアル番号があれば、新しいパソコンでも引き続きご利用いただけます。</div>
+        </div>
+
+        <div class="section-title">■ サポート・その他</div>
 
         <div class="faq-item">
             <div class="question">お友達紹介キャンペーンとは？</div>
@@ -165,13 +261,8 @@
         </div>
 
         <div class="faq-item">
-            <div class="question">ダウンロード時に警告が表示されます</div>
-            <div class="answer">Googleドライブの「ウイルス スキャンを実行できません」という警告はファイルサイズが大きい場合に自動的に表示されます。「このままダウンロード」をクリックして進んでください。</div>
-        </div>
-
-        <div class="faq-item">
-            <div class="question">閲覧版はどのような場合に使いますか？</div>
-            <div class="answer">コンサルタントや金融機関など、外部の第三者にデータを共有したい場合など、編集機能が不要な方向けの無料版です。</div>
+            <div class="question">操作方法が分からない場合はどうすればいいですか？</div>
+            <div class="answer">使用マニュアルをご用意しております。このLINEからも、お気軽にお問い合わせください。</div>
         </div>
 
         <a href="../" class="back-link">← トップページに戻る</a>
