@@ -2,31 +2,84 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>購入方法 - CashCalendar</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CashCalendar - プラン選択</title>
     <meta name="robots" content="noindex, follow">
-    <meta http-equiv="refresh" content="0; url=https://script.google.com/macros/s/AKfycbzTiDr6eV7M4f13G0C3i_NlyoC6HzfFBPT-EjKDsfDiCmM_BpTOVhFAnra7lYXMsD4V_g/exec">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Noto Sans JP', sans-serif;
-            background: linear-gradient(135deg, #1565C0 0%, #1976D2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            text-align: center;
-            color: white;
-        }
-        a { color: white; }
+        * { box-sizing: border-box; }
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Hiragino Sans','Noto Sans JP',sans-serif;margin:0;padding:50px 20px;background:#f8f9fa;min-height:100vh;display:flex;align-items:center;justify-content:center;}
+        .container{background:white;padding:50px 40px;border-radius:8px;box-shadow:0 2px 20px rgba(0,0,0,0.08);max-width:480px;width:100%;text-align:center;}
+        h1{color:#2c3e50;margin:0 0 10px 0;font-size:28px;}
+        .plan{border:2px solid #e0e0e0;border-radius:8px;padding:24px;margin-top:20px;text-align:left;}
+        .plan.highlight{border-color:#2c3e50;}
+        .plan-title{font-size:16px;font-weight:700;color:#2c3e50;margin-bottom:8px;}
+        .plan-price{font-size:32px;font-weight:700;color:#2c3e50;margin-bottom:4px;}
+        .plan-sub{font-size:13px;color:#7f8c8d;margin-bottom:16px;}
+        .btn{display:block;width:100%;padding:14px;background:#2c3e50;color:white;border:none;border-radius:5px;font-size:15px;font-weight:600;text-align:center;cursor:pointer;box-sizing:border-box;}
+        .btn:disabled{opacity:0.6;cursor:default;}
+        .campaign{margin-top:20px;padding:14px 16px;background:linear-gradient(135deg,#ff9800,#ff6f00);color:white;border-radius:8px;font-size:14px;font-weight:600;line-height:1.6;}
+        .campaign .label{display:inline-block;background:rgba(255,255,255,0.25);padding:2px 10px;border-radius:3px;font-size:11px;margin-bottom:6px;}
+        .faq-box{max-width:440px;margin:20px auto 0;padding:18px;background:#f8f9fa;border-radius:8px;text-align:left;}
+        .faq-title{font-weight:600;font-size:14px;margin-bottom:12px;color:#333;}
+        .faq-q{font-weight:600;font-size:12px;color:#2c3e50;}
+        .faq-a{font-size:12px;color:#555;margin-top:3px;margin-bottom:12px;}
+        .error{color:#f44336;font-size:13px;margin-top:12px;display:none;}
     </style>
-    <script>
-        window.top.location.href = "https://script.google.com/macros/s/AKfycbzTiDr6eV7M4f13G0C3i_NlyoC6HzfFBPT-EjKDsfDiCmM_BpTOVhFAnra7lYXMsD4V_g/exec";
-    </script>
 </head>
 <body>
-    <p>最新の購入ページへ移動しています…<br>
-    自動的に移動しない場合は<a href="https://script.google.com/macros/s/AKfycbzTiDr6eV7M4f13G0C3i_NlyoC6HzfFBPT-EjKDsfDiCmM_BpTOVhFAnra7lYXMsD4V_g/exec">こちら</a>をクリックしてください。</p>
+<div class="container">
+    <h1>CashCalendar</h1>
+    <p style="color:#7f8c8d;">資金管理カレンダーシステム</p>
+    <div class="plan highlight">
+        <div class="plan-title">買い切りプラン</div>
+        <div style="text-decoration:line-through;color:#95a5a6;font-size:14px;">定価 ¥58,000</div>
+        <div class="plan-price">¥34,800</div>
+        <div class="plan-sub">期間限定 40%OFF・一括払い</div>
+        <button class="btn" onclick="startCheckout('onetime', this)">このプランで購入</button>
+    </div>
+    <div class="plan">
+        <div class="plan-title">月額プラン</div>
+        <div class="plan-price">¥1,950<span style="font-size:14px;font-weight:400;">/月</span></div>
+        <div class="plan-sub">18回のお支払いで終了(合計¥35,100)</div>
+        <button class="btn" onclick="startCheckout('subscription', this)">このプランで購入</button>
+    </div>
+    <div class="campaign"><span class="label">今なら</span><br>🎁 ご紹介キャンペーン実施中!<br>お友達をご紹介いただくとAmazonギフト券1,000円分をプレゼント</div>
+    <div class="faq-box">
+        <div class="faq-title">よくある質問</div>
+        <div class="faq-q">Q. 買い切りとサブスクの違いは？</div>
+        <div class="faq-a">機能に違いはありません。買い切りは一括払い、月額プランは月々¥1,950×18回の分割払いです。</div>
+        <div class="faq-q">Q. 月額プランは解約できますか？</div>
+        <div class="faq-a">いつでも解約可能です。18回完了前に解約の場合は残額を一括でお支払いいただきます。</div>
+        <div class="faq-q">Q. 返金は可能ですか？</div>
+        <div class="faq-a">デジタル商品のため原則返金不可ですが、システムエラー等の場合は個別対応します。</div>
+        <div class="faq-q">Q. カード情報は安全ですか？</div>
+        <div class="faq-a">世界的に信頼される決済サービスStripeを利用しており、カード情報は当社では保有しません。</div>
+    </div>
+    <p style="margin-top:20px;font-size:12px;"><a href="https://cashcalendar.jp/terms.html" target="_blank" style="color:#7f8c8d;">利用規約・特定商取引法に基づく表記はこちら</a></p>
+    <p class="error" id="errorMsg">決済ページを生成できませんでした。しばらくしてから再度お試しください。</p>
+</div>
+<script>
+const GAS_URL = 'https://script.google.com/macros/s/AKfycbzTiDr6eV7M4f13G0C3i_NlyoC6HzfFBPT-EjKDsfDiCmM_BpTOVhFAnra7lYXMsD4V_g/exec';
+async function startCheckout(plan, btn) {
+    const errorEl = document.getElementById('errorMsg');
+    errorEl.style.display = 'none';
+    btn.disabled = true;
+    const originalText = btn.textContent;
+    btn.textContent = '処理中...';
+    try {
+        const res = await fetch(GAS_URL + '?action=createSession&plan=' + plan);
+        const data = await res.json();
+        if (data.url) {
+            window.location.href = data.url;
+        } else {
+            throw new Error(data.error || 'unknown error');
+        }
+    } catch (err) {
+        errorEl.style.display = 'block';
+        btn.disabled = false;
+        btn.textContent = originalText;
+    }
+}
+</script>
 </body>
 </html>
