@@ -63,6 +63,14 @@
             margin: 0 auto 30px;
             line-height: 1.8;
         }
+        .hero-banner {
+            max-width: 860px;
+            margin: 0 auto 28px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+        }
+        .hero-banner img { display: block; width: 100%; }
         .btn-primary {
             display: inline-block;
             background: #ffffff;
@@ -386,8 +394,9 @@
 <body>
 
     <div class="hero">
-        <div class="badge">資金管理カレンダーシステム</div>
-        <h1>今日時点の資金残高が<br>ひと目で分かる</h1>
+        <div class="hero-banner">
+            <img src="assets/hero-banner.webp" alt="CashCalendar キャッシュカレンダー - お金の見える化で、未来の安心をつくる">
+        </div>
         <p>入金・支払の予定を入力するだけで、資金管理の状況を自動で見える化。資金不足の兆候も事前にアラートでお知らせします。</p>
         <a href="purchase/" class="btn-primary">🛒 購入プランを見る</a>
 
