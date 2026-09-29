@@ -325,6 +325,11 @@
         }
         .dl-card h3 { font-size: 0.95rem; color: #14213d; margin-bottom: 8px; }
         .dl-card p { font-size: 0.82rem; color: #6b7280; margin-bottom: 16px; line-height: 1.6; }
+        .trial-tags { display: flex; justify-content: center; gap: 6px; margin-bottom: 16px; flex-wrap: wrap; }
+        .trial-tag {
+            display: inline-block; background: #eef2f7; color: #14213d;
+            font-size: 0.68rem; font-weight: 700; padding: 3px 10px; border-radius: 20px;
+        }
         .btn-outline {
             display: inline-block;
             border: 1px solid #14213d; color: #14213d;
@@ -491,8 +496,13 @@
             <div class="downloads">
                 <div class="dl-card">
                     <h3>🧪 試用版</h3>
-                    <p>全機能を10件まで無料でお試し可能(期間制限なし)</p>
-                    <a href="trial/" class="btn-solid">無料でお試し</a>
+                    <p><strong>メアド入力すら不要。</strong><br>0.5秒で資金繰り予測を開始。</p>
+                    <div class="trial-tags">
+                        <span class="trial-tag">登録なし</span>
+                        <span class="trial-tag">無料</span>
+                        <span class="trial-tag">即時利用</span>
+                    </div>
+                    <a href="https://cashcalendar.jp/" class="btn-solid">今すぐ試す</a>
                 </div>
                 <div class="dl-card">
                     <h3>👁️ 閲覧版</h3>
@@ -591,7 +601,7 @@
 document.querySelectorAll('a[href="purchase/"]').forEach(function(el){
     el.addEventListener('click', function(){ if (window.fbq) fbq('trackCustom', 'ClickPurchase'); });
 });
-document.querySelectorAll('a[href="trial/"]').forEach(function(el){
+document.querySelectorAll('a[href="https://cashcalendar.jp/"]').forEach(function(el){
     el.addEventListener('click', function(){ if (window.fbq) fbq('trackCustom', 'ClickTrial'); });
 });
 </script>
