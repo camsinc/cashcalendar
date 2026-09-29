@@ -23,7 +23,7 @@
     <a href="https://lin.ee/o3tXtBN" class="btn">LINEでサポートを受ける</a>
 </div>
 <script>
-const GAS_URL = 'https://script.google.com/macros/s/AKfycbx0W2kPQ5Iw7E8hA5CWCNrFHNsUnasRjW4eSkiC_jAz5QXevLp1o0k0vKWDkvkR6LUVJA/exec';
+const GAS_URL = 'https://script.google.com/macros/s/AKfycbyw4dv1_uNtNnmAphoutlli5tHYad9nQ-W-5FY87CjX_MIosWbWQZ9EftUnLjnjoOuK/exec';
 const sessionId = new URLSearchParams(window.location.search).get('session_id');
 if (sessionId) {
     fetch(GAS_URL + '?action=confirmPurchase&session_id=' + encodeURIComponent(sessionId)).catch(function(){});
