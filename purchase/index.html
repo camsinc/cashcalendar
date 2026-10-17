@@ -5,6 +5,24 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>CashCalendar - プラン選択</title>
     <meta name="robots" content="noindex, follow">
+    <!-- ▼ Googleアナリティクス -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2W445QW2F4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-2W445QW2F4');
+    </script>
+    <!-- ▼ Metaピクセル -->
+    <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '4058785644448603');
+    fbq('track', 'PageView');
+    </script>
     <style>
         * { box-sizing: border-box; }
         body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Hiragino Sans','Noto Sans JP',sans-serif;margin:0;padding:50px 20px;background:#f8f9fa;min-height:100vh;display:flex;align-items:center;justify-content:center;}
@@ -81,6 +99,12 @@ async function startCheckout(plan, btn) {
     btn.disabled = true;
     const originalText = btn.textContent;
     btn.textContent = '処理中...';
+    const value = plan === 'subscription' ? 580 : 34800;
+    try { localStorage.setItem('ccPlan', JSON.stringify({plan: plan, value: value, t: Date.now()})); } catch (e) {}
+    try {
+        if (window.gtag) gtag('event', 'begin_checkout', {currency: 'JPY', value: value, plan: plan});
+        if (window.fbq) fbq('track', 'InitiateCheckout', {currency: 'JPY', value: value, content_name: plan});
+    } catch (e) {}
     try {
         const res = await fetch(GAS_URL + '?action=createSession&plan=' + plan);
         const data = await res.json();
@@ -90,6 +114,7 @@ async function startCheckout(plan, btn) {
             throw new Error(data.error || 'unknown error');
         }
     } catch (err) {
+        try { if (window.gtag) gtag('event', 'checkout_error', {plan: plan}); } catch (e) {}
         errorEl.style.display = 'block';
         btn.disabled = false;
         btn.textContent = originalText;
