@@ -43,7 +43,7 @@ document.addEventListener('click', function (e) {
   if (/^https:\/\/cashcalendar\.jp\/trial\.html\/?(\?.*)?$/.test(h)) {
     fb('track', 'Lead', {content_name: 'trial'});
     ga('event', 'trial_click');
-  } else if (h.indexOf('lin.ee') > -1) {
+  } else if (h.indexOf('lin.ee') > -1 || h.indexOf('line.me/R/ti/p/') > -1) {
     fb('track', 'Contact');
     ga('event', 'line_click');
   } else if (h.indexOf('/purchase') > -1) {
@@ -148,7 +148,7 @@ document.addEventListener('click', function (e) {
       <div style="background: #eafcef; border-radius: 14px; padding: 24px 20px; text-align: center;">
         <div style="font-size: 14px; font-weight: 700; color: #05a94a; margin-bottom: 6px;">使い方や導入の相談はLINEで</div>
         <div style="font-size: 12px; color: #4a5a52; margin-bottom: 12px;">365日12時間以内にお返事します</div>
-        <a href="https://lin.ee/o3tXtBN" style="display: inline-block; padding: 14px 28px; background: #06C755; color: #ffffff; border-radius: 24px; font-size: 15px; font-weight: 700;">公式LINEで相談する</a>
+        <a href="https://line.me/R/ti/p/@162sebzn" style="display: inline-block; padding: 14px 28px; background: #06C755; color: #ffffff; border-radius: 24px; font-size: 15px; font-weight: 700;">公式LINEで相談する</a>
       </div>
 
       <div style="margin-top: 28px; padding-top: 20px; border-top: 1px solid #e7ebef; text-align: center; font-size: 11px; color: #9aa1ab; line-height: 1.9;">
